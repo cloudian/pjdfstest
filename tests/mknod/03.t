@@ -16,11 +16,6 @@ nxx="${nx}x"
 
 mkdir -p "${nx%/*}"
 
-expect 0 mknod ${nx} f 0644 0 0
-expect fifo stat ${nx} type
-expect 0 unlink ${nx}
-expect ENAMETOOLONG mknod ${nxx} f 0644 0 0
-
 expect 0 mknod ${nx} b 0644 1 2
 expect block stat ${nx} type
 expect 0 unlink ${nx}

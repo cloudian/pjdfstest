@@ -5,7 +5,7 @@
 dir=`dirname $0`
 . ${dir}/../misc.sh
 
-# POSIX doesn't explicitly state the errno for open(2)'ing sockets.
+# POSIX doesn't explicitly state the errno for open(2)'ing s.
 case ${os} in
 Darwin|FreeBSD)
 	expected_error=EOPNOTSUPP
@@ -19,7 +19,7 @@ Linux)
 	;;
 esac
 
-desc="open returns $expected_error when trying to open UNIX domain socket"
+desc="open returns $expected_error when trying to open UNIX domain "
 
 echo "1..5"
 
